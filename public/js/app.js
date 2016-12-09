@@ -1,6 +1,27 @@
-angular.module('candle', ['ui.router'])
-.config(function($stateProvider, $urlRouterProvider, $locationProvider){
+angular.module('candle', ['ui.router', 'satellizer'])
+.config(function($stateProvider, $urlRouterProvider, $locationProvider, $authProvider){
   $urlRouterProvider.otherwise('/')
+
+  var skipIfLoggedIn = ['$q', '$location', '$auth', function($q, $location, $auth) {
+  var deferred = $q.defer();
+  if ($auth.isAuthenticated()) {
+    $location.path('/dashboard')
+  } else {
+    console.log('hey');
+    deferred.resolve();
+  }
+  return deferred.promise;
+}];
+
+  var loginRequired = ['$q', '$location', '$auth', function($q, $location, $auth) {
+      var deferred = $q.defer();
+      if ($auth.isAuthenticated()) {
+        deferred.resolve();
+      } else {
+        $location.path('/login');
+      }
+      return deferred.promise;
+    }];
 
   $stateProvider
   .state('landing', {
@@ -31,6 +52,7 @@ angular.module('candle', ['ui.router'])
         }
   })
 
-  // use the HTML5 History API
-        $locationProvider.html5Mode(true);
+  $authProvider.loginUrl = '/auth/login';
+  $authProvider.signupUrl = '/auth/signup';
+
 });
