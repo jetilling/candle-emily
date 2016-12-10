@@ -17,7 +17,8 @@ var app = module.exports = express();
 app.set('db', db);
 
 //----Server Controllers----//
-var authCtrl = require('./controllers/authCtrl.js');
+var authCtrl = require('./controllers/authCtrl.js'),
+    profileCtrl = require('./controllers/profileCtrl.js');
 
 
 app.use(bodyParser.json());
@@ -49,6 +50,9 @@ function ensureAuthenticated(req, res, next) {
 app.get('/api/me', ensureAuthenticated, authCtrl.getMe);
 app.post('/auth/login', authCtrl.login);
 app.post('/auth/signup', authCtrl.signUp);
+//----ProfileCtrl----//
+app.get('/api/userData/:id', ensureAuthenticated, profileCtrl.userData);
+
 
 var port = config.port
 app.listen(port, function(){

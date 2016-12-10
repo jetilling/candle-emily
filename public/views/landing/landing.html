@@ -1,11 +1,15 @@
 <div ng-controller="landingCtrl">
   Welcome!
-  <button ui-sref="login">Login</button>
-  <button ui-sref="signUp">Sign Up</button>
+  <button ui-sref="login" ng-show="loginBtn">Login</button>
+  <button ui-sref="signUp" ng-show="signUpBtn">Sign Up</button>
+  <div class="name" ng-show="accountName">
+    Hi, {{name}}
+  </div>
+  <button type="button" name="button" ng-click="logout()" ng-show="logoutBtn">Log Out</button>
 
-  <div class="main-intro">
+  <!-- <div class="main-intro">
     <div class="main-left"><img src="../../img/candleEdit.jpg" alt="" /></div>
     <div class="main-right-top"><img src="../../img/candles.jpg" alt="" /></div>
     <div class="main-right-bottom"><img src="../../img/candles.jpg" alt="" /></div>
-  </div>
+  </div> -->
 </div>

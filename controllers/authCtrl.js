@@ -62,7 +62,7 @@ module.exports = {
           if (err) { return next(err); }
           bcrypt.hash(req.body.password, salt, null, function(err, hash) {
             if (err) { return next(err); }
-            db.create_user([req.body.first_name, req.body.last_name, hash, req.body.email], function(err, users){
+            db.create_user([req.body.firstName, req.body.lastName, hash, req.body.email], function(err, users){
               db.users.findOne({email: req.body.email}, function(err, user){
                 res.send({
                           token: createJWT(user),
