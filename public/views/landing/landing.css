@@ -16,26 +16,61 @@
 
 .buttons {
   position: relative;
-  left: 88vw;
+  left: 75vw;
   top: -6vh;
+  width: 18vw;
+}
+
+.aboutBtn {
+  font-family: 'Alice', serif;
+  font-size: 15px;
+  color: mintcream;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.cartBtn {
+  font-family: 'Alice', serif;
+  font-size: 15px;
+  color: mintcream;
+  background: transparent;
+  outline: none;
+  border: none;
 }
 
 .loginBtn {
-  background: transparent;
   font-family: 'Alice', serif;
+  font-size: 15px;
+  color: mintcream;
+  background: transparent;
   outline: none;
   border: none;
-  color: mintcream;
-  font-size: 15px;
 }
 
 .registerBtn {
-  background: transparent;
   font-family: 'Alice', serif;
+  font-size: 15px;
+  color: mintcream;
+  background: transparent;
   outline: none;
   border: none;
-  color: mintcream;
+}
+
+.name {
+  font-family: 'Alice', serif;
   font-size: 15px;
+  color: mintcream;
+  display: inline-block;
+}
+
+.logoutBtn {
+  font-family: 'Alice', serif;
+  font-size: 15px;
+  color: mintcream;
+  background: transparent;
+  outline: none;
+  border: none;
 }
 
 .intro-main {
@@ -60,4 +95,12 @@
   left: -25px;
   height: 120vh;
   width: 120vw;
+}
+
+.how-it-works {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  top: 70vh;
+  background: lightgrey;
 }
