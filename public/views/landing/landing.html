@@ -1,15 +1,26 @@
 <div ng-controller="landingCtrl">
-  Welcome!
-  <button ui-sref="login" ng-show="loginBtn">Login</button>
-  <button ui-sref="signUp" ng-show="signUpBtn">Sign Up</button>
-  <div class="name" ng-show="accountName">
-    Hi, {{name}}
-  </div>
-  <button type="button" name="button" ng-click="logout()" ng-show="logoutBtn">Log Out</button>
+  <nav class="nav-bar">
+    <div class="title">
+      White Elephant Candles
+    </div>
+    <div class="buttons">
+      <button class="loginBtn" ui-sref="login" ng-show="loginBtn">Login</button>
+      <button class="registerBtn" ui-sref="signUp" ng-show="signUpBtn">Register</button>
+    </div>
+    <div class="name" ng-show="accountName">
+      Hi, {{name}}
+    </div>
+    <button type="button" name="button" ng-click="logout()" ng-show="logoutBtn">Log Out</button>
+  </nav>
+  <section class="intro-main">
+    <div class="overlay"></div>
+        <div class="intro-video">
+          <!-- <video muted loop class="candle" src="../../videos/candleBurning.MOV" autoplay poster="posterimage.jpg"></video> -->
+        </div>
+    </div>
+  </section>
+  <section>
 
-  <!-- <div class="main-intro">
-    <div class="main-left"><img src="../../img/candleEdit.jpg" alt="" /></div>
-    <div class="main-right-top"><img src="../../img/candles.jpg" alt="" /></div>
-    <div class="main-right-bottom"><img src="../../img/candles.jpg" alt="" /></div>
-  </div> -->
+  </section>
+
 </div>
