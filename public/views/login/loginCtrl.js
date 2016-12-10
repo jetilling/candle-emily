@@ -9,7 +9,7 @@ angular.module('candle').controller('loginCtrl', function($scope, $state, $auth)
       console.log("loginCtrl:", response);
       if(response.status === 200){
         $auth.setToken(response);
-        $state.go('profile');
+        $state.go('landing');
       }
     }).catch(function (response) {
       console.log("loginCtrl Error:", response);
