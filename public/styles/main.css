@@ -1,1 +1,5 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css?family=Alice');
+
+/*views*/
 @import "../views/landing/landing.css";

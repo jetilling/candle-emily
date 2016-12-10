@@ -1,37 +1,63 @@
-.main-intro {
+.nav-bar {
+  z-index: 100;
+  position: fixed;
   width: 100vw;
-  height: 60vh;
+  height: 10vh;
+  background: transparent;
 }
 
-.main-left {
-  width: 51vw;
-  height: 69vh;
+.title {
+  color: mintcream;
+  font-size: 50px;
   display: inline-block;
+  font-family: 'Alice', serif;
+  margin: 10px;
 }
 
-.main-left img {
-  width: 55vw;
-}
-
-.main-right-top {
-  width: 40vw;
-  height: 41vh;
-  display: inline-block;
+.buttons {
   position: relative;
-  top: -35vh;
-  left: 5vw;
+  left: 88vw;
+  top: -6vh;
 }
 
-.main-right-top img {
-  width: 40vw;
+.loginBtn {
+  background: transparent;
+  font-family: 'Alice', serif;
+  outline: none;
+  border: none;
+  color: mintcream;
+  font-size: 15px;
 }
 
-.main-right-bottom {
-  width: 40vw;
+.registerBtn {
+  background: transparent;
+  font-family: 'Alice', serif;
+  outline: none;
+  border: none;
+  color: mintcream;
+  font-size: 15px;
+}
+
+.intro-main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /*overflow: hidden;*/
+}
+
+.intro-video {
+  background: url("../../img/unsplashCandles.png");
+  background-repeat: no-repeat;
+  width: 100vw;
   height: 100vh;
-  display: inline-block;
 }
 
-.main-right-bottom img {
-  width: 40vw;
+.candle {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  height: 120vh;
+  width: 120vw;
 }
