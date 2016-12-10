@@ -4,13 +4,13 @@
       White Elephant Candles
     </div>
     <div class="buttons">
+      <button class="aboutBtn" ui-sref="about" type="button" name="button">About</button>
+      <button class="cartBtn" ui-sref="cart" type="button" name="button">Cart</button>
       <button class="loginBtn" ui-sref="login" ng-show="loginBtn">Login</button>
       <button class="registerBtn" ui-sref="signUp" ng-show="signUpBtn">Register</button>
+      <div class="name" ng-show="accountName">Hi, {{name}}</div>
+      <button class="logoutBtn" type="button" name="button" ng-click="logout()" ng-show="logoutBtn">Log Out</button>
     </div>
-    <div class="name" ng-show="accountName">
-      Hi, {{name}}
-    </div>
-    <button type="button" name="button" ng-click="logout()" ng-show="logoutBtn">Log Out</button>
   </nav>
   <section class="intro-main">
     <div class="overlay"></div>
@@ -19,7 +19,7 @@
         </div>
     </div>
   </section>
-  <section>
+  <section class="how-it-works">
 
   </section>
 
