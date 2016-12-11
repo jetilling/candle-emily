@@ -1,0 +1,78 @@
+.cart-nav {
+  width: 100vw;
+  height: 10vh;
+  border-bottom: 2px solid black;
+}
+
+.cart-nav-title a{
+  color: black;
+  font-size: 50px;
+  display: inline-block;
+  font-family: 'Alice', serif;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.cart-buttons {
+  position: relative;
+  left: 75vw;
+  top: -6vh;
+  width: 18vw;
+}
+
+.cart-aboutBtn {
+  font-family: 'Alice', serif;
+  font-size: 15px;
+  color: black;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.cart-loginBtn {
+  font-family: 'Alice', serif;
+  font-size: 15px;
+  color: black;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.cart-registerBtn {
+  font-family: 'Alice', serif;
+  font-size: 15px;
+  color: black;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.cart-name {
+  font-family: 'Alice', serif;
+  font-size: 15px;
+  color: black;
+  display: inline-block;
+}
+
+.cart-logoutBtn {
+  font-family: 'Alice', serif;
+  font-size: 15px;
+  color: black;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.cart-main {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart {
+  width: 75vw;
+  height: 50vh;
+  border: 1px solid black
+}

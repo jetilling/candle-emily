@@ -1,0 +1,19 @@
+<section>
+  <nav class="cart-nav">
+    <div class="cart-nav-title">
+      <a ui-sref="landing">White Elephant Candles</a>
+    </div>
+    <div class="cart-buttons">
+      <button class="cart-aboutBtn" ui-sref="about" type="button" name="button">About</button>
+      <button class="cart-loginBtn" ui-sref="login" ng-show="loginBtn">Login</button>
+      <button class="cart-registerBtn" ui-sref="signUp" ng-show="signUpBtn">Register</button>
+      <div class="cart-name" ng-show="accountName">Hi, {{name}}</div>
+      <button class="cart-logoutBtn" type="button" name="button" ng-click="logout()" ng-show="logoutBtn">Log Out</button>
+    </div>
+  </nav>
+  <div class="cart-main">
+    <div class="cart">
+
+    </div>
+  </div>
+</section>

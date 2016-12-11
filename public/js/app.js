@@ -51,6 +51,15 @@ angular.module('candle', ['ui.router', 'satellizer'])
           }
         }
   })
+  .state('cart', {
+        url: '/cart',
+          views: {
+            "main@": {
+              controller: 'cartCtrl',
+              templateUrl: './views/cart/cart.html'
+          }
+        }
+  })
 
   $authProvider.loginUrl = '/auth/login';
   $authProvider.signupUrl = '/auth/signup';
