@@ -2,7 +2,7 @@
   z-index: 100;
   position: fixed;
   width: 100vw;
-  height: 10vh;
+  height: 70px;
   background: transparent;
 }
 
@@ -16,12 +16,21 @@
 
 .buttons {
   position: relative;
-  left: 75vw;
-  top: -6vh;
-  width: 18vw;
+  left: calc(100vw - 290px);
+  top: -40px;
+  width: 275px;
 }
 
 .aboutBtn {
+  font-family: 'Alice', serif;
+  font-size: 15px;
+  color: mintcream;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.shopBtn {
   font-family: 'Alice', serif;
   font-size: 15px;
   color: mintcream;

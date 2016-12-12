@@ -60,6 +60,15 @@ angular.module('candle', ['ui.router', 'satellizer'])
           }
         }
   })
+  .state('shop', {
+        url: '/shop',
+          views: {
+            "main@": {
+              controller: 'shopCtrl',
+              templateUrl: './views/shop/shop.html'
+          }
+        }
+  })
 
   $authProvider.loginUrl = '/auth/login';
   $authProvider.signupUrl = '/auth/signup';

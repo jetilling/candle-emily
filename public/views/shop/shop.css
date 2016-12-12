@@ -1,10 +1,10 @@
-.cart-nav {
+.shop-nav {
   width: 100vw;
   height: 70px;
   border-bottom: 2px solid black;
 }
 
-.cart-nav-title a{
+.shop-nav-title a{
   color: black;
   font-size: 50px;
   display: inline-block;
@@ -13,14 +13,14 @@
   text-decoration: none;
 }
 
-.cart-buttons {
+.shop-buttons {
   position: relative;
   left: 75vw;
   top: -40px;
   width: 18vw;
 }
 
-.cart-aboutBtn {
+.shop-aboutBtn {
   font-family: 'Alice', serif;
   font-size: 15px;
   color: black;
@@ -29,7 +29,7 @@
   border: none;
 }
 
-.cart-shopBtn {
+.shop-loginBtn {
   font-family: 'Alice', serif;
   font-size: 15px;
   color: black;
@@ -38,7 +38,7 @@
   border: none;
 }
 
-.cart-loginBtn {
+.shop-registerBtn {
   font-family: 'Alice', serif;
   font-size: 15px;
   color: black;
@@ -47,41 +47,18 @@
   border: none;
 }
 
-.cart-registerBtn {
-  font-family: 'Alice', serif;
-  font-size: 15px;
-  color: black;
-  background: transparent;
-  outline: none;
-  border: none;
-}
-
-.cart-name {
+.shop-name {
   font-family: 'Alice', serif;
   font-size: 15px;
   color: black;
   display: inline-block;
 }
 
-.cart-logoutBtn {
+.shop-logoutBtn {
   font-family: 'Alice', serif;
   font-size: 15px;
   color: black;
   background: transparent;
   outline: none;
   border: none;
-}
-
-.cart-main {
-  width: 100vw;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cart {
-  width: 75vw;
-  height: 50vh;
-  border: 1px solid black
 }
