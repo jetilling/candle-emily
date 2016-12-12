@@ -1,6 +1,6 @@
 .nav-bar {
   z-index: 100;
-  position: fixed;
+  position: absolute;
   width: 100vw;
   height: 70px;
   background: transparent;
@@ -16,9 +16,9 @@
 
 .buttons {
   position: relative;
-  left: calc(100vw - 290px);
+  left: calc(100vw - 350px);
   top: -40px;
-  width: 275px;
+  width: 300px;
 }
 
 .aboutBtn {
@@ -95,7 +95,41 @@
   background: url("../../img/unsplashCandles.png");
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+  height: 64vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sub-title {
+  color: mintcream;
+  font-size: 17px;
+  width: 27vw;
+  height: 24vh;
+  position: relative;
+  font-family: 'Alice', serif;
+  border: 2px solid mintcream;
+  border-radius: 5px;
+  left: 8vw;
+  text-align: center;
+  padding: 5px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.shopNow {
+  width: 90%;
+  height: 20%;
+  font-family: 'Alice', serif;
+  font-size: 17px;
+  color: mintcream;
+  background: #FF5B64;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid black
 }
 
 .candle {
