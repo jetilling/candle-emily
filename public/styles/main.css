@@ -3,4 +3,5 @@
 
 /*views*/
 @import "../views/landing/landing.css";
-@import "../views/cart/cart.css"
+@import "../views/cart/cart.css";
+@import "../views/shop/shop.css";
