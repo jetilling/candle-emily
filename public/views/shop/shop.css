@@ -29,6 +29,15 @@
   border: none;
 }
 
+.shop-cartBtn {
+  font-family: 'Alice', serif;
+  font-size: 15px;
+  color: black;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
 .shop-loginBtn {
   font-family: 'Alice', serif;
   font-size: 15px;
