@@ -5,9 +5,16 @@ angular.module('candle').controller('landingCtrl', function($scope, mainService,
   $scope.loginBtn = true;
   $scope.signUpBtn = true;
   $scope.loginDirective = false;
+  $scope.signUpDirective = false;
 
   $scope.showLoginBox = function(){
+    $scope.signUpDirective = false;
     $scope.loginDirective = true;
+  }
+
+  $scope.showSignUpBox = function(){
+    $scope.loginDirective = false;
+    $scope.signUpDirective = true;
   }
 
 if ($auth.isAuthenticated()){
