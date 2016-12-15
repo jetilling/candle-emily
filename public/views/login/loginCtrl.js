@@ -2,6 +2,7 @@ angular.module('candle').controller('loginCtrl', function($scope, $state, $auth)
 
   //login function - response.data.token accesses token.
   $scope.logIn = function(email, password) {
+    console.log('hey from login ctrl');
     $auth.login({
       email: email,
       password: password,

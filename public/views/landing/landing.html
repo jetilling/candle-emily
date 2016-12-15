@@ -7,11 +7,12 @@
       <button class="aboutBtn" ui-sref="about" type="button" name="button">About</button>
       <button class="shopBtn" ui-sref="shop" type="button" name="button">Shop</button>
       <button class="cartBtn" ui-sref="cart" type="button" name="button">Cart</button>
-      <button class="loginBtn" ui-sref="login" ng-show="loginBtn">Login</button>
+      <button class="loginBtn" ng-show="loginBtn" ng-click="showLoginBox()">Login</button>
       <button class="registerBtn" ui-sref="signUp" ng-show="signUpBtn">Register</button>
       <div class="name" ng-show="accountName">Hi, {{name}}</div>
       <button class="logoutBtn" type="button" name="button" ng-click="logout()" ng-show="logoutBtn">Log Out</button>
     </div>
+    <login-Directive ng-show="loginDirective"></login-Directive>
   </nav>
   <section class="intro-main">
     <div class="overlay"></div>
