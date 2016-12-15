@@ -4,6 +4,11 @@ angular.module('candle').controller('landingCtrl', function($scope, mainService,
   $scope.logoutBtn = false;
   $scope.loginBtn = true;
   $scope.signUpBtn = true;
+  $scope.loginDirective = false;
+
+  $scope.showLoginBox = function(){
+    $scope.loginDirective = true;
+  }
 
 if ($auth.isAuthenticated()){
   mainService.userData()
@@ -20,7 +25,10 @@ if ($auth.isAuthenticated()){
     $auth.logout()
         .then(function() {
           console.log('You have been logged out');
-          $state.go('landing');
+          $scope.accountName = false;
+          $scope.logoutBtn = false;
+          $scope.loginBtn = true;
+          $scope.signUpBtn = true;
     });
   }
 }
