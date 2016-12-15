@@ -13,7 +13,6 @@ angular.module('candle').directive('loginDirective', function(){
           console.log("loginCtrl:", response);
           if(response.status === 200){
             $auth.setToken(response);
-            // $state.go('landing');
             $scope.loginDirective = false;
             if ($auth.isAuthenticated()){
               mainService.userData()
