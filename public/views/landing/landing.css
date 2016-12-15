@@ -16,9 +16,9 @@
 
 .buttons {
   position: relative;
-  left: calc(100vw - 290px);
+  left: calc(100vw - 350px);
   top: -40px;
-  width: 275px;
+  width: 300px;
 }
 
 .aboutBtn {
@@ -83,19 +83,50 @@
 }
 
 .intro-main {
-  position: absolute;
+  background: url("../../img/unsplashCandles.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  /*overflow: hidden;*/
+  height: 64vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.intro-video {
-  background: url("../../img/unsplashCandles.png");
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
+.sub-title {
+  color: mintcream;
+  font-size: 17px;
+  width: 27vw;
+  height: 24vh;
+  position: relative;
+  font-family: 'Alice', serif;
+  border: 2px solid mintcream;
+  border-radius: 5px;
+  left: 8vw;
+  text-align: center;
+  padding: 5px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.shopNow {
+  width: 90%;
+  height: 20%;
+  font-family: 'Alice', serif;
+  font-size: 17px;
+  color: mintcream;
+  background: #FF5B64;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid black
 }
 
 .candle {
@@ -106,10 +137,114 @@
   width: 120vw;
 }
 
-.how-it-works {
+.middle {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  top: 70vh;
+  height: 72vh;
   background: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.middle-title {
+  font-family: 'Alice', serif;
+  font-size: 34px;
+}
+
+.middle-steps {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.middle-step-1 {
+  background: yellow;
+  margin: 10px;
+  width: 22vw;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#one {
+  width: 20vw;
+  text-align: center;
+  font-family: 'Alice', serif;
+  font-size: 20px;
+}
+
+#step-1 {
+  width: 20vw;
+  text-align: center;
+  font-family: 'Alice', serif;
+  font-size: 18px;
+}
+
+.middle-step-2 {
+  background: red;
+  margin: 10px;
+  width: 22vw;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#two {
+  width: 20vw;
+  text-align: center;
+  font-family: 'Alice', serif;
+  font-size: 20px;
+}
+
+#step-2 {
+  width: 20vw;
+  text-align: center;
+  font-family: 'Alice', serif;
+  font-size: 18px;
+}
+
+.middle-step-3 {
+  background: green;
+  margin: 10px;
+  width: 22vw;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#three {
+  width: 20vw;
+  text-align: center;
+  font-family: 'Alice', serif;
+  font-size: 20px;
+}
+
+#step-3 {
+  width: 20vw;
+  text-align: center;
+  font-family: 'Alice', serif;
+  font-size: 18px;
+}
+
+.bottom {
+
+}
+
+.bottom-title-1 {
+  font-family: 'Alice', serif;
+  font-size: 34px;
+}
+
+.bottom-title-2 {
+  font-family: 'Alice', serif;
+  font-size: 34px;
 }
