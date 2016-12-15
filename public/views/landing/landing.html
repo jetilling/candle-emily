@@ -7,25 +7,42 @@
       <button class="aboutBtn" ui-sref="about" type="button" name="button">About</button>
       <button class="shopBtn" ui-sref="shop" type="button" name="button">Shop</button>
       <button class="cartBtn" ui-sref="cart" type="button" name="button">Cart</button>
-      <button class="loginBtn" ui-sref="login" ng-show="loginBtn">Login</button>
-      <button class="registerBtn" ui-sref="signUp" ng-show="signUpBtn">Register</button>
+      <button class="loginBtn" ng-show="loginBtn" ng-click="showLoginBox()">Login</button>
+      <button class="registerBtn" ng-show="signUpBtn" ng-click="showSignUpBox()">Register</button>
       <div class="name" ng-show="accountName">Hi, {{name}}</div>
       <button class="logoutBtn" type="button" name="button" ng-click="logout()" ng-show="logoutBtn">Log Out</button>
     </div>
+    <login-Directive ng-show="loginDirective"></login-Directive>
+    <sign-Up-Directive ng-show="signUpDirective"></sign-Up-Directive>
   </nav>
   <section class="intro-main">
-    <div class="overlay"></div>
-        <div class="intro-video">
           <div class="sub-title">
             One-of-a-kind, handmade, container candles. <br> You choose the size and scent and we send you an awesome mystery candle!
             <button class="shopNow" ui-sref="shop" type="button" name="button">Shop Now!</button>
           </div>
-          <!-- <video muted loop class="candle" src="../../videos/candleBurning.MOV" autoplay poster="posterimage.jpg"></video> -->
-        </div>
+  </section>
+  <section class="middle">
+    <span class="middle-title">How It Works</span>
+    <div class="middle-steps">
+      <div class="middle-step-1">
+        <p id="one">1</p>
+        <p id="step-1">Pick the sent and the size of the candle you want</p>
+      </div>
+      <div class="middle-step-2">
+        <p id="two">2</p>
+        <p id="step-2">We get your order pick the coolest container we have and hand pour your candle</p>
+      </div>
+      <div class="middle-step-3">
+        <p id="three">3</p>
+        <p id="step-3">You get your surprise candle a couple days later</p>
+      </div>
     </div>
   </section>
-  <section class="how-it-works">
+  <section class="bottom">
+    <span class="bottom-title-1">What are you waiting for?</span>
+    <span class="bottom-title-2">Order your candle now!</span>
 
+    </div>
   </section>
 
 </div>
