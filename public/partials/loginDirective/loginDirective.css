@@ -1,0 +1,27 @@
+.login-directive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-background {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  z-index: 200;
+}
+
+.login-front {
+  position: relative;
+  z-index: 220;
+  background: mintcream;
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
