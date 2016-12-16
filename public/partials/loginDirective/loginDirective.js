@@ -4,6 +4,10 @@ angular.module('candle').directive('loginDirective', function(){
     templateUrl: './partials/loginDirective/loginDirective.html',
     controller: function($scope, mainService, $auth, $state){
 
+      $scope.closeModal = function(){
+        $scope.loginDirective = false;
+      }
+
       $scope.logIn = function(email, password) {
         console.log('hey from login ctrl');
         $auth.login({
