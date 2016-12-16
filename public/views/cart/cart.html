@@ -6,11 +6,13 @@
     <div class="cart-buttons">
       <button class="cart-aboutBtn" ui-sref="about" type="button" name="button">About</button>
       <button class="cart-shopBtn" ui-sref="shop" type="button" name="button">Shop</button>
-      <button class="cart-loginBtn" ui-sref="login" ng-show="loginBtn">Login</button>
-      <button class="cart-registerBtn" ui-sref="signUp" ng-show="signUpBtn">Register</button>
+      <button class="cart-loginBtn" ng-show="loginBtn" ng-click="showLoginBox()">Login</button>
+      <button class="cart-registerBtn" ng-show="signUpBtn" ng-click="showSignUpBox()">Register</button>
       <div class="cart-name" ng-show="accountName">Hi, {{name}}</div>
       <button class="cart-logoutBtn" type="button" name="button" ng-click="logout()" ng-show="logoutBtn">Log Out</button>
     </div>
+    <login-Directive ng-show="loginDirective" class="login-directive"></login-Directive>
+    <sign-Up-Directive ng-show="signUpDirective" class="login-directive"></sign-Up-Directive>
   </nav>
   <div class="cart-main">
     <div class="cart">

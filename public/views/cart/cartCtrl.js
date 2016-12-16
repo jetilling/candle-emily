@@ -5,24 +5,34 @@ angular.module('candle').controller('cartCtrl', function($scope, $state, mainSer
   $scope.loginBtn = true;
   $scope.signUpBtn = true;
 
-if ($auth.isAuthenticated()){
-  mainService.userData()
-  .then(function(response){
-    console.log(response[0])
-    $scope.name = response[0].first_name
-  })
-  $scope.accountName = true;
-  $scope.logoutBtn = true;
-  $scope.loginBtn = false;
-  $scope.signUpBtn = false;
-
-  $scope.logout = function(){
-    $auth.logout()
-        .then(function() {
-          console.log('You have been logged out');
-          $state.go('landing');
-    });
+  $scope.showLoginBox = function(){
+    $scope.signUpDirective = false;
+    $scope.loginDirective = true;
   }
-}
+
+  $scope.showSignUpBox = function(){
+    $scope.loginDirective = false;
+    $scope.signUpDirective = true;
+  }
+
+  if ($auth.isAuthenticated()){
+    mainService.userData()
+    .then(function(response){
+      console.log(response[0])
+      $scope.name = response[0].first_name
+    })
+    $scope.accountName = true;
+    $scope.logoutBtn = true;
+    $scope.loginBtn = false;
+    $scope.signUpBtn = false;
+
+    $scope.logout = function(){
+      $auth.logout()
+          .then(function() {
+            console.log('You have been logged out');
+            $state.go('landing');
+      });
+    }
+  }
 
 })
