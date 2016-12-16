@@ -4,8 +4,13 @@ angular.module('candle').directive('loginDirective', function(){
     templateUrl: './partials/loginDirective/loginDirective.html',
     controller: function($scope, mainService, $auth, $state){
 
-      $scope.closeModal = function(){
+      $scope.loginCloseModal = function(){
         $scope.loginDirective = false;
+      }
+
+      $scope.switchToSignUp = function(){
+        $scope.loginDirective = false;
+        $scope.signUpDirective = true;
       }
 
       $scope.logIn = function(email, password) {

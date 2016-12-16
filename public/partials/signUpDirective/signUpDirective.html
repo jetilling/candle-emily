@@ -1,9 +1,13 @@
 <div>
-  Sign up
-  <input type="input" name="name" placeholder="First Name" ng-model="firstName">
-  <input type="input" name="name" placeholder="Last Name" ng-model="lastName">
-  <input type="email" name="name" placeholder="Email Address" ng-model="email">
-  <input type="password" name="name" placeholder="Password" ng-model="password">
-  <input type="password" name="name" placeholder="Confirm Password" ng-model="confirmPassword">
-  <button type="button" name="button" ng-click="create(firstName, lastName, email, password, confirmPassword)">Create Account</button>
+  <div class="login-background" ng-click="closeModal()"></div>
+  <div class="login-front">
+    <div class="login-title">We're glad to have you!</div>
+    <input type="input" name="name" placeholder="First Name" ng-model="firstName">
+    <input type="input" name="name" placeholder="Last Name" ng-model="lastName">
+    <input type="email" name="name" placeholder="Email Address" ng-model="email">
+    <input type="password" name="name" placeholder="Password" ng-model="password">
+    <input type="password" name="name" placeholder="Confirm Password" ng-model="confirmPassword">
+    <button type="button" name="button" ng-click="create(firstName, lastName, email, password, confirmPassword)">Create Account</button>
+    <p class="link" ng-click="switchToLogin()">Already have an account? Login here</p>
+  </div
 </div>
