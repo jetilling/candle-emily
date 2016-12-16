@@ -1,8 +1,10 @@
-<div class="login-directive">
-  <div class="login-background" ng-click="closeModal()"></div>
+<div>
+  <div class="login-background" ng-click="loginCloseModal()"></div>
   <div class="login-front">
+    <div class="login-title">Login</div>
     <input type="email" name="name" placeholder="Email" ng-model="email">
     <input type="password" name="name" placeholder="Password" ng-model="password">
     <button type="button" name="button" ng-click="logIn(email, password)">Log In</button>
+    <p class="link" ng-click="switchToSignUp()">Don't have an account? Register here</p>
   </div>
 </div>
