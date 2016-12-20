@@ -19,4 +19,13 @@ this.userData = function(){
     })
   }
 
+this.getProducts = function(){
+  return $http({
+    method: 'GET',
+    url: '/api/getProducts'
+  }).then(function(response){
+    return response.data;
+  })
+}
+
 })
