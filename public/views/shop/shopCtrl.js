@@ -35,4 +35,9 @@ angular.module('candle').controller('shopCtrl', function($scope, $state, mainSer
     }
   }
 
+  mainService.getProducts()
+  .then(function(response){
+    console.log(response);
+  })
+
 })

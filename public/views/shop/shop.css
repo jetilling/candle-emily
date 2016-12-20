@@ -71,3 +71,7 @@
   outline: none;
   border: none;
 }
+
+.shop-mystery img {
+  width: 25vw;
+}
