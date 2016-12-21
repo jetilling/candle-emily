@@ -1,5 +1,8 @@
 angular.module('candle').controller('shopCtrl', function($scope, $state, mainService, $auth){
 
+  $scope.quantitySmall = 1
+  $scope.quantityMedium = 1
+  $scope.quantityLarge = 1
   $scope.accountName = false;
   $scope.logoutBtn = false;
   $scope.loginBtn = true;
@@ -39,5 +42,32 @@ angular.module('candle').controller('shopCtrl', function($scope, $state, mainSer
   .then(function(response){
     console.log(response);
   })
+
+  $scope.changeQuantitySmall = function(type){
+    if (type === "add"){
+      $scope.quantitySmall+= 1;
+    }
+    else if (type === "sub" && $scope.quantitySmall > 1){
+      $scope.quantitySmall-= 1;
+    }
+  }
+
+  $scope.changeQuantityMedium = function(type){
+    if (type === "add"){
+      $scope.quantityMedium+= 1;
+    }
+    else if (type === "sub" && $scope.quantityMedium > 1){
+      $scope.quantityMedium-= 1;
+    }
+  }
+
+  $scope.changeQuantityLarge = function(type){
+    if (type === "add"){
+      $scope.quantityLarge+= 1;
+    }
+    else if (type === "sub" && $scope.quantityLarge > 1){
+      $scope.quantityLarge-= 1;
+    }
+  }
 
 })
