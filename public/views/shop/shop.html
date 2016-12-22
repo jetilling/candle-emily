@@ -16,40 +16,10 @@
   </nav>
   <section class="shop-middle">
     <div class="shop-products">
-      <div class="shop-mystery">
-        <div class="shop-mystery-small">
-          <img src="../../img/mysteryCandles.jpg" alt="">
-          <p class="shop-mystery-title">Small Mystery candle</p>
-          <p class="price">$10</p>
-          <div class="quantity">
-            <button type="button" name="button" ng-click="changeQuantitySmall('sub')">-</button>
-            {{quantitySmall}}
-            <button type="button" name="button" ng-click="changeQuantitySmall('add')">+</button>
-          </div>
-          <button type="button" name="button">Add to Cart</button>
-        </div>
-        <div class="shop-mystery-medium">
-          <img src="../../img/mysteryCandles.jpg" alt="">
-          <p class="shop-mystery-title">Medium Mystery candle</p>
-          <p class="price">$10</p>
-          <div class="quantity">
-            <button type="button" name="button" ng-click="changeQuantityMedium('sub')">-</button>
-            {{quantityMedium}}
-            <button type="button" name="button" ng-click="changeQuantityMedium('add')">+</button>
-          </div>
-          <button type="button" name="button">Add to Cart</button>
-        </div>
-        <div class="shop-mystery-large">
-          <img src="../../img/mysteryCandles.jpg" alt="">
-          <p class="shop-mystery-title">Large Mystery candle</p>
-          <p class="price">$10</p>
-          <div class="quantity">
-            <button type="button" name="button" ng-click="changeQuantityLarge('sub')">-</button>
-            {{quantityLarge}}
-            <button type="button" name="button" ng-click="changeQuantityLarge('add')">+</button>
-          </div>
-          <button type="button" name="button">Add to Cart</button>
-        </div>
+      <div class="shop-mystery" ng-repeat = "candle in candles">
+        {{candle.name}}
+        {{candle.price}}
+        <shop-Directive></shop-Directive>
       </div>
     </div>
   </section>
