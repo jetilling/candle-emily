@@ -2,7 +2,7 @@ angular.module('candle').directive('shopDirective', function(){
   return {
     restrict: 'AE',
     templateUrl: './partials/shopDirective/shopDirective.html',
-    controller: function($scope, mainService, $state){
+    controller: function($scope, mainService, $state, $rootScope){
 
       $scope.quantity = 1;
 
@@ -15,9 +15,22 @@ angular.module('candle').directive('shopDirective', function(){
         }
       }
 
-      $scope.addToCart = function(id, quantity){
-        console.log(id, quantity)
+      $scope.addToCart = function(id, quantity, name){
+        console.log(id, quantity, name);
+        $rootScope.candleName = name;
+        $rootScope.quantityBanner = quantity;
+        mainService.addToCart(id, quantity)
+        .then(function(respone){
+          console.log(response)
+        })
+        if(quantity > 1){
+          $rootScope.addedBannerMultiple = true;
+        }
+        else {
+          $rootScope.addedBannerSingle = true;
+        }
       }
+
     }
   }
 })

@@ -15,6 +15,12 @@
     <sign-Up-Directive ng-show="signUpDirective" class="login-directive"></sign-Up-Directive>
   </nav>
   <section class="shop-middle">
+    <div class="shop-added-banner" ng-show="addedBannerSingle">
+      {{quantityBanner}} {{candleName}} was added to your cart!
+    </div>
+    <div class="shop-added-banner" ng-show="addedBannerMultiple">
+      {{quantityBanner}} {{candleName}}'s were added to your cart!
+    </div>
     <div class="shop-products">
       <div class="shop-mystery" ng-repeat = "candle in candles">
         {{candle.name}}

@@ -1,9 +1,13 @@
-angular.module('candle').controller('shopCtrl', function($scope, $state, mainService, $auth){
+angular.module('candle').controller('shopCtrl', function($scope, $state, mainService, $auth, $rootScope){
 
   $scope.accountName = false;
   $scope.logoutBtn = false;
   $scope.loginBtn = true;
   $scope.signUpBtn = true;
+  $rootScope.quantityBanner;
+  $rootScope.addedBannerSingle = false;
+  $rootScope.addedBannerMultiple = false;
+  $rootScope.candleName;
 
   $scope.showLoginBox = function(){
     $scope.signUpDirective = false;
