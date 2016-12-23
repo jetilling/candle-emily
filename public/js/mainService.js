@@ -9,7 +9,7 @@ angular.module('candle').service('mainService', function($http){
     })
   }
 
-this.userData = function(){
+  this.userData = function(){
     return $http({
       method: 'GET',
       url: '/api/me'
@@ -19,13 +19,17 @@ this.userData = function(){
     })
   }
 
-this.getProducts = function(){
-  return $http({
-    method: 'GET',
-    url: '/api/getProducts'
-  }).then(function(response){
-    return response.data;
-  })
-}
+  this.getProducts = function(){
+    return $http({
+      method: 'GET',
+      url: '/api/getProducts'
+    }).then(function(response){
+      return response.data;
+    })
+  }
+
+  this.addToCart = function(id, quantity){
+    console.log(id, quantity);
+  }
 
 })
