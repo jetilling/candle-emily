@@ -2,7 +2,7 @@ angular.module('candle').directive('shopDirective', function(){
   return {
     restrict: 'AE',
     templateUrl: './partials/shopDirective/shopDirective.html',
-    controller: function($scope, mainService, $state, $rootScope){
+    controller: function($scope, mainService, $state, $rootScope, $timeout){
 
       $scope.quantity = 1;
 
@@ -15,20 +15,30 @@ angular.module('candle').directive('shopDirective', function(){
         }
       }
 
-      $scope.addToCart = function(id, quantity, name){
-        console.log(id, quantity, name);
+      console.log(document.cookie.split(';')[1].split('=')[1]);
+
+      $scope.addToCart = function(id, quantity, name, price){
+        if(document.cookie.split(';')[1] === undefined) {
+          var token = Math.random().toString(20).substr(2);
+          document.cookie = "token = " + token;
+        }
+        else token = document.cookie.split(';')[1].split('=')[1]
         $rootScope.candleName = name;
         $rootScope.quantityBanner = quantity;
-        mainService.addToCart(id, quantity)
-        .then(function(respone){
-          console.log(response)
+        var totalPrice = price * quantity;
+        mainService.addToCart(id, quantity, token, totalPrice)
+        .then(function(response){
+          if(response === 200){
+            $timeout(function () {
+              if(quantity > 1){
+                $rootScope.addedBannerMultiple = true;
+              }
+              else {
+                $rootScope.addedBannerSingle = true;
+              }
+            }, 500);
+          }
         })
-        if(quantity > 1){
-          $rootScope.addedBannerMultiple = true;
-        }
-        else {
-          $rootScope.addedBannerSingle = true;
-        }
       }
 
     }
