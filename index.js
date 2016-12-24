@@ -19,7 +19,8 @@ app.set('db', db);
 //----Server Controllers----//
 var authCtrl = require('./controllers/authCtrl.js'),
     profileCtrl = require('./controllers/profileCtrl.js'),
-    shopCtrl = require('./controllers/shopCtrl.js');
+    shopCtrl = require('./controllers/shopCtrl.js'),
+    cartCtrl = require('./controllers/cartCtrl.js');
 
 
 app.use(bodyParser.json());
@@ -56,6 +57,8 @@ app.get('/api/userData/:id', ensureAuthenticated, profileCtrl.userData);
 //----ShopCtrl----//
 app.get('/api/getProducts', shopCtrl.getProducts);
 app.post('/api/addToCart', shopCtrl.addToCart);
+//----CartCtrl----//
+app.get('/api/getSavedProducts/:token', cartCtrl.getSavedProducts);
 
 var port = config.port
 app.listen(port, function(){
