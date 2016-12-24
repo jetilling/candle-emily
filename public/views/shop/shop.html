@@ -16,15 +16,15 @@
   </nav>
   <section class="shop-middle">
     <div class="shop-added-banner" ng-show="addedBannerSingle">
-      {{quantityBanner}} {{candleName}} was added to your cart!
+      {{quantityBanner}} {{candleName}} was added to your cart! <button type="button" name="button" ui-sref="cart">Go To Cart</button>
     </div>
     <div class="shop-added-banner" ng-show="addedBannerMultiple">
-      {{quantityBanner}} {{candleName}}'s were added to your cart!
+      {{quantityBanner}} {{candleName}}'s were added to your cart! <button type="button" name="button" ui-sref="cart">Go To Cart</button>
     </div>
     <div class="shop-products">
       <div class="shop-mystery" ng-repeat = "candle in candles">
         {{candle.name}}
-        {{candle.price}}
+        ${{candle.price}}
         <shop-Directive></shop-Directive>
       </div>
     </div>

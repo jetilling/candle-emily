@@ -28,8 +28,15 @@ angular.module('candle').service('mainService', function($http){
     })
   }
 
-  this.addToCart = function(id, quantity){
-    console.log(id, quantity);
+  this.addToCart = function(id, quantity, token, price){
+    console.log(id, quantity, token);
+    return $http({
+      method: 'POST',
+      url: '/api/addToCart',
+      data: {id: id, quantity: quantity, token: token, price: price}
+    }).then(function(response){
+      return response.status;
+    })
   }
 
 })

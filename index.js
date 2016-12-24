@@ -55,6 +55,7 @@ app.post('/auth/signup', authCtrl.signUp);
 app.get('/api/userData/:id', ensureAuthenticated, profileCtrl.userData);
 //----ShopCtrl----//
 app.get('/api/getProducts', shopCtrl.getProducts);
+app.post('/api/addToCart', shopCtrl.addToCart);
 
 var port = config.port
 app.listen(port, function(){
