@@ -35,4 +35,11 @@ angular.module('candle').controller('cartCtrl', function($scope, $state, mainSer
     }
   }
 
+  var token = document.cookie.split(';')[1].split('=')[1]
+
+  mainService.getSavedProducts(token)
+  .then(function(response){
+    console.log(response);
+  })
+
 })
