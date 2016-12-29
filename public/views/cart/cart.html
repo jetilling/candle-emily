@@ -15,8 +15,15 @@
     <sign-Up-Directive ng-show="signUpDirective" class="login-directive"></sign-Up-Directive>
   </nav>
   <div class="cart-main">
-    <div class="cart" ng-repeat="product in products">
-
+    <div class="cart">
+      <div class="cart-product" ng-repeat="product in products">
+        {{product.name}} <br>
+        Price of Product: {{product.price}} <br>
+        Quantity: {{product.quantity}} <button type="button" name="button">Edit</button> <br>
+        Price: {{product.price * product.quantity}} <br>
+        <button type="button" name="button">Remove</button>
+      </div>
+      Total: {{totalPrice}}
     </div>
   </div>
 </section>

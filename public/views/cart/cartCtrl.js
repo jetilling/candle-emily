@@ -39,7 +39,8 @@ angular.module('candle').controller('cartCtrl', function($scope, $state, mainSer
 
   mainService.getSavedProducts(token)
   .then(function(response){
-    console.log(response);
+    $scope.products = response.items;
+    $scope.totalPrice = response.totalPrice;
   })
 
 })
