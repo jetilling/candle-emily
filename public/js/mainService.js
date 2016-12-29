@@ -45,18 +45,25 @@ angular.module('candle').service('mainService', function($http){
     }).then(function(response){
       var result = {
         items: [],
-        itemPrice: [],
-        itemQuantity: [],
         totalPrice: 0
       }
-      console.log(result.items)
       response.data.forEach(function(item){
           result.totalPrice += item.price * item.quantity;
-          if(!result.items.includes(item.products_id)){
-            result.items.push(item.products_id);
-          }
+          result.items.push(item);
       })
-      console.log(result);
+
+      var num = 1
+      for(var i = 0; i < result.items.length; i++){
+        for(var j = num; j <result.items.length; j++){
+          if(result.items[j].products_id === result.items[i].products_id){
+            result.items[i].quantity += result.items[j].quantity;
+            result.items.splice(j, 1);
+            j--;
+          }
+        }
+        num++;
+      }
+      return result;
     })
   }
 

@@ -85,3 +85,8 @@
   height: 50vh;
   border: 1px solid black
 }
+
+.cart-product {
+  margin: 10px;
+  background: lightblue;
+}
