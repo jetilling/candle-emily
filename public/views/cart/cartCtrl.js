@@ -43,4 +43,22 @@ angular.module('candle').controller('cartCtrl', function($scope, $state, mainSer
     $scope.totalPrice = response.totalPrice;
   })
 
+  $scope.removeProductFromCart = function(id){
+    var test = confirm("Are you sure?");
+    if(test === true){
+      mainService.removeProductFromCart(id, token)
+      .then(function(response){
+        if(response.data) {
+          $scope.$apply(
+            mainService.getSavedProducts(token)
+            .then(function(response){
+              $scope.products = response.items;
+              $scope.totalPrice = response.totalPrice;
+            })
+          )
+        }
+      })
+    }
+  }
+
 })
