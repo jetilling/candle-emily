@@ -19,9 +19,9 @@
       <div class="cart-product" ng-repeat="product in products">
         {{product.name}} <br>
         Price of Product: {{product.price}} <br>
-        Quantity: {{product.quantity}} <button type="button" name="button">Edit</button> <br>
+        Quantity: {{product.quantity}} <button type="button" name="button">Edit</button><br>
         Price: {{product.price * product.quantity}} <br>
-        <button type="button" name="button">Remove</button>
+        <button type="button" name="button" ng-click="removeProductFromCart(product.products_id)">Remove</button>
       </div>
       Total: {{totalPrice}}
     </div>

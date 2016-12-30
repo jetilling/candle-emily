@@ -67,4 +67,17 @@ angular.module('candle').service('mainService', function($http){
     })
   }
 
+  this.removeProductFromCart = function(id, token){
+    return $http({
+      method: 'DELETE',
+      url: '/api/removeProductFromCart/' + id,
+      data: {token: token},
+      headers: {
+        'Content-type': 'application/json;charset=utf-8'
+      }
+    }).then(function(response){
+      return response.data
+    })
+  }
+
 })
