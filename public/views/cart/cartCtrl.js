@@ -48,14 +48,12 @@ angular.module('candle').controller('cartCtrl', function($scope, $state, mainSer
     if(test === true){
       mainService.removeProductFromCart(id, token)
       .then(function(response){
-        if(response.data) {
-          $scope.$apply(
+        if(response) {
             mainService.getSavedProducts(token)
             .then(function(response){
-              $scope.products = response.items;
-              $scope.totalPrice = response.totalPrice;
+                $scope.products = response.items;
+                $scope.totalPrice = response.totalPrice
             })
-          )
         }
       })
     }
