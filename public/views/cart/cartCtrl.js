@@ -4,6 +4,10 @@ angular.module('candle').controller('cartCtrl', function($scope, $state, mainSer
   $scope.logoutBtn = false;
   $scope.loginBtn = true;
   $scope.signUpBtn = true;
+  $scope.editBtn = true;
+  $scope.decrease = false;
+  $scope.increase = false;
+  $scope.update = false;
 
   $scope.showLoginBox = function(){
     $scope.signUpDirective = false;
@@ -42,6 +46,13 @@ angular.module('candle').controller('cartCtrl', function($scope, $state, mainSer
     $scope.products = response.items;
     $scope.totalPrice = response.totalPrice;
   })
+
+  $scope.showEditBtns = function(){
+    $scope.editBtn = false;
+    $scope.decrease = true;
+    $scope.increase = true;
+    $scope.update = true;
+  }
 
   $scope.removeProductFromCart = function(id){
     var test = confirm("Are you sure?");
