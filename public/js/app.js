@@ -1,4 +1,4 @@
-angular.module('candle', ['ui.router', 'satellizer'])
+angular.module('candle', ['ui.router', 'satellizer', 'xeditable'])
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, $authProvider){
   $urlRouterProvider.otherwise('/')
 
@@ -7,7 +7,6 @@ angular.module('candle', ['ui.router', 'satellizer'])
   if ($auth.isAuthenticated()) {
     $location.path('/dashboard')
   } else {
-    console.log('hey');
     deferred.resolve();
   }
   return deferred.promise;

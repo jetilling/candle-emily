@@ -10,6 +10,13 @@ module.exports = {
     })
   },
 
+  updateProduct: function(req, res){
+    db.update_Product([req.body.id, req.body.quantity], function(err, cart){
+      if(err) console.log(err);
+      else res.status(200).send(true);
+    })
+  },
+
   removeProductFromCart: function(req, res){
     db.remove_product_from_cart([req.params.id, req.body.token], function(err, cart){
       if(err) console.log(err);

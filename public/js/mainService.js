@@ -55,6 +55,16 @@ angular.module('candle').service('mainService', function($http){
     })
   }
 
+  this.updateProduct = function(id, quantity){
+    return $http({
+      method: 'PUT',
+      url: '/api/updateProduct',
+      data: {id: id, quantity: quantity}
+    }).then(function(response){
+      return response.data
+    })
+  }
+
   this.removeProductFromCart = function(id, token){
     return $http({
       method: 'DELETE',
