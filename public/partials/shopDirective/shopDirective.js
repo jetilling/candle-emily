@@ -15,8 +15,6 @@ angular.module('candle').directive('shopDirective', function(){
         }
       }
 
-      console.log(document.cookie.split(';')[1].split('=')[1]);
-
       $scope.addToCart = function(id, quantity, name, price){
         if(document.cookie.split(';')[1] === undefined) {
           var token = Math.random().toString(20).substr(2);

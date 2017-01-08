@@ -43,8 +43,8 @@ angular.module('candle').controller('cartCtrl', function($scope, $state, mainSer
     $scope.totalPrice = response.totalPrice;
   })
 
-  $scope.updateTotalPrice = function(id, quantity){
-    mainService.updateProduct(id, quantity)
+  $scope.updateTotalPrice = function(productsId, quantity){
+    mainService.updateProduct(productsId, quantity)
     .then(function(response){
       if(response) {
         mainService.getSavedProducts(token)

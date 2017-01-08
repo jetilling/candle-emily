@@ -11,7 +11,7 @@ module.exports = {
   },
 
   updateProduct: function(req, res){
-    db.update_Product([req.body.id, req.body.quantity], function(err, cart){
+    db.update_Product([req.body.productsId, req.body.quantity], function(err, cart){
       if(err) console.log(err);
       else res.status(200).send(true);
     })
