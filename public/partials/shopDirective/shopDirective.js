@@ -27,14 +27,14 @@ angular.module('candle').directive('shopDirective', function(){
         mainService.addToCart(id, quantity, token, totalPrice)
         .then(function(response){
           if(response === 200){
-            $timeout(function () {
               if(quantity > 1){
+                $rootScope.addedBannerSingle = false;
                 $rootScope.addedBannerMultiple = true;
+
               }
               else {
-                $rootScope.addedBannerSingle = true;
+                  $rootScope.addedBannerSingle = true;
               }
-            }, 500);
           }
         })
       }
