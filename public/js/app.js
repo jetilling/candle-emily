@@ -68,6 +68,15 @@ angular.module('candle', ['ui.router', 'satellizer', 'xeditable'])
           }
         }
   })
+  .state('checkout', {
+        url: '/checkout',
+          views: {
+            "main@": {
+              controller: 'checkoutCtrl',
+              templateUrl: './views/checkout/checkout.html'
+          }
+        }
+  })
 
   $authProvider.loginUrl = '/auth/login';
   $authProvider.signupUrl = '/auth/signup';
