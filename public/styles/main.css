@@ -5,4 +5,5 @@
 @import "../views/landing/landing.css";
 @import "../views/cart/cart.css";
 @import "../views/shop/shop.css";
+@import "../views/checkout/checkout.css";
 @import "../partials/loginDirective/loginDirective.css";
