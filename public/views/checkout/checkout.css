@@ -1,0 +1,8 @@
+.checkout-auth {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
+}

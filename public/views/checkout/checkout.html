@@ -1,0 +1,32 @@
+<section>
+  <nav class="cart-nav">
+    <div class="cart-nav-title">
+      <a ui-sref="landing">White Elephant Candles</a>
+    </div>
+    <div class="cart-buttons">
+      <button class="cart-aboutBtn" ui-sref="about" type="button" name="button">About</button>
+      <button class="cart-shopBtn" ui-sref="shop" type="button" name="button">Shop</button>
+      <button class="cart-loginBtn" ng-show="loginBtn" ng-click="showLoginBox()">Login</button>
+      <button class="cart-registerBtn" ng-show="signUpBtn" ng-click="showSignUpBox()">Register</button>
+      <div class="cart-name" ng-show="accountName">Hi, {{name}}</div>
+      <button class="cart-logoutBtn" type="button" name="button" ng-click="logout()" ng-show="logoutBtn">Log Out</button>
+    </div>
+    <login-Directive ng-show="loginDirective" class="login-directive"></login-Directive>
+    <sign-Up-Directive ng-show="signUpDirective" class="login-directive"></sign-Up-Directive>
+  </nav>
+  <div class="checkout-auth" ng-show="checkoutAuth">
+    <div class="checkout-login">
+      <input type="email" name="name" placeholder="Email" ng-model="email">
+      <input type="password" name="name" placeholder="Password" ng-model="password">
+      <button type="button" name="button" ng-click="logIn(email, password)">Log In</button>
+    </div>
+    <div class="checkout-signUp">
+      <input type="input" name="name" placeholder="First Name" ng-model="firstName">
+      <input type="input" name="name" placeholder="Last Name" ng-model="lastName">
+      <input type="email" name="name" placeholder="Email Address" ng-model="email">
+      <input type="password" name="name" placeholder="Password" ng-model="password">
+      <input type="password" name="name" placeholder="Confirm Password" ng-model="confirmPassword">
+      <button type="button" name="button" ng-click="create(firstName, lastName, email, password, confirmPassword)">Create Account</button>
+    </div>
+  </div>
+</section>
