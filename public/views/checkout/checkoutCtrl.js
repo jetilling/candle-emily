@@ -6,6 +6,7 @@ angular.module('candle').controller("checkoutCtrl", function(mainService, $scope
   $scope.signUpBtn = true;
   $scope.checkoutAuth = true;
   $scope.cart = false;
+  $scope.checkoutCart = false;
 
   $scope.showLoginBox = function(){
     $scope.signUpDirective = false;
@@ -29,16 +30,18 @@ angular.module('candle').controller("checkoutCtrl", function(mainService, $scope
     $scope.signUpBtn = false;
     $scope.checkoutAuth = false;
     $scope.cart = true;
+    $scope.checkoutCart = true;
 
-    $scope.logout = function(){
-      $auth.logout()
-          .then(function() {
-            console.log('You have been logged out');
-            $state.go('landing');
-      });
-    }
+
   }
 
+  $scope.logout = function(){
+    $auth.logout()
+        .then(function() {
+          console.log('You have been logged out');
+          $state.go('landing');
+    });
+  }
 
 
 
