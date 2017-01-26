@@ -16,17 +16,22 @@
   </nav>
   <div class="checkout-auth" ng-show="checkoutAuth">
     <div class="checkout-login">
-      <input type="email" name="name" placeholder="Email" ng-model="email">
-      <input type="password" name="name" placeholder="Password" ng-model="password">
-      <button type="button" name="button" ng-click="logIn(email, password)">Log In</button>
+      <input type="email" name="name" placeholder="Email" ng-model="loginEmail">
+      <input type="password" name="name" placeholder="Password" ng-model="loginPassword">
+      <button type="button" name="button" ng-click="logIn(loginEmail, loginPassword)">Log In</button>
     </div>
     <div class="checkout-signUp">
-      <input type="input" name="name" placeholder="First Name" ng-model="firstName">
-      <input type="input" name="name" placeholder="Last Name" ng-model="lastName">
-      <input type="email" name="name" placeholder="Email Address" ng-model="email">
-      <input type="password" name="name" placeholder="Password" ng-model="password">
-      <input type="password" name="name" placeholder="Confirm Password" ng-model="confirmPassword">
-      <button type="button" name="button" ng-click="create(firstName, lastName, email, password, confirmPassword)">Create Account</button>
+      <input type="input" name="name" placeholder="First Name" ng-model="signUpFirstName">
+      <input type="input" name="name" placeholder="Last Name" ng-model="signUpLastName">
+      <input type="email" name="name" placeholder="Email Address" ng-model="signUpEmail">
+      <input type="password" name="name" placeholder="Password" ng-model="signUpPassword">
+      <input type="password" name="name" placeholder="Confirm Password" ng-model="signUpConfirmPassword">
+      <button type="button" name="button" ng-click="create(signUpFirstName, signUpLastName, signUpEmail, signUpPassword, signUpConfirmPassword)">Create Account</button>
     </div>
+  </div>
+</section>
+<section>
+  <div class="checkout-cart" ng-show="checkoutCart">
+    You're logged in! Yay!
   </div>
 </section>

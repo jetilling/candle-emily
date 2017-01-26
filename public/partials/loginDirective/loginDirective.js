@@ -33,6 +33,8 @@ angular.module('candle').directive('loginDirective', function(){
               $scope.logoutBtn = true;
               $scope.loginBtn = false;
               $scope.signUpBtn = false;
+              $scope.checkoutAuth = false;
+              $scope.checkoutCart = true;
 
             }
           }
