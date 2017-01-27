@@ -78,4 +78,32 @@ angular.module('candle').service('mainService', function($http){
     })
   }
 
+  this.addUserIdToCart = function(userId, token){
+    return $http({
+      method: 'PUT',
+      url: '/api/addUserIdToCart',
+      data: {userId: userId, token: token}
+    }).then(function(response){
+      return response.data
+    })
+  }
+
+  this.getUsersProducts = function(userId){
+    return $http({
+      method: 'GET',
+      url: '/api/getUsersProducts/' + userId
+    }).then(function(response){
+      console.log(response)
+      var result = {
+        items: [],
+        totalPrice: 0
+      }
+      response.data.forEach(function(item){
+          result.totalPrice += item.price * item.quantity;
+          result.items.push(item);
+      })
+      return result;
+    })
+  }
+
 })

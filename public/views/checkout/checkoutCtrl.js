@@ -21,8 +21,21 @@ angular.module('candle').controller("checkoutCtrl", function(mainService, $scope
   if ($auth.isAuthenticated()){
     mainService.userData()
     .then(function(response){
-      console.log(response[0])
+      userId = response[0].id
       $scope.name = response[0].first_name
+      token = document.cookie.split(';')[1].split('=')[1]
+
+      mainService.addUserIdToCart(userId, token)
+      .then(function(response){
+        if(response){
+          mainService.getUsersProducts(userId)
+          .then(function(response){
+            $scope.products = response.items;
+            $scope.totalPrice = response.totalPrice;
+          })
+        }
+      })
+
     })
     $scope.accountName = true;
     $scope.logoutBtn = true;
@@ -31,7 +44,6 @@ angular.module('candle').controller("checkoutCtrl", function(mainService, $scope
     $scope.checkoutAuth = false;
     $scope.cart = true;
     $scope.checkoutCart = true;
-
 
   }
 
