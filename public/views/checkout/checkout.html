@@ -31,7 +31,16 @@
   </div>
 </section>
 <section>
+  You're one step closer to your one-of-a-kind candle!
   <div class="checkout-cart" ng-show="checkoutCart">
-    You're logged in! Yay!
+    <button type="button" name="button" ui-sref="cart">Edit</button>
+    <div class="checkout-product" ng-repeat="product in products">
+      {{product.name}} <br>
+      Price of Product: {{product.price}} <br>
+      Quantity: {{product.quantity}}<br>
+      Price: {{product.price * product.quantity}} <br>
+    </div>
+    Total: {{totalPrice}}
+  </div>
   </div>
 </section>

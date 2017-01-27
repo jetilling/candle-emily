@@ -59,7 +59,9 @@ app.get('/api/getProducts', shopCtrl.getProducts);
 app.post('/api/addToCart', shopCtrl.addToCart);
 //----CartCtrl----//
 app.get('/api/getSavedProducts/:token', cartCtrl.getSavedProducts);
+app.get('/api/getUsersProducts/:usersId', cartCtrl.getUsersProducts);
 app.put('/api/updateProduct', cartCtrl.updateProduct);
+app.put('/api/addUserIdToCart', cartCtrl.addUserIdToCart);
 app.delete('/api/removeProductFromCart/:id', cartCtrl.removeProductFromCart);
 
 var port = config.port
