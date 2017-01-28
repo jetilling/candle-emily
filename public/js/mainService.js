@@ -43,6 +43,7 @@ angular.module('candle').service('mainService', function($http){
       method: 'GET',
       url: '/api/getSavedProducts/' + token
     }).then(function(response){
+            console.log(response)
       var result = {
         items: [],
         totalPrice: 0
@@ -93,7 +94,6 @@ angular.module('candle').service('mainService', function($http){
       method: 'GET',
       url: '/api/getUsersProducts/' + userId
     }).then(function(response){
-      console.log(response)
       var result = {
         items: [],
         totalPrice: 0

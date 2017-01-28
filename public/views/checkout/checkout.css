@@ -28,3 +28,30 @@
   align-items: center;
   justify-content: center;
 }
+
+.checkout-middle {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  height: 50vh;
+  background: lightblue;
+}
+
+.checkout-product {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.checkout-total {
+  margin-left: 10px;
+  font-size: 20px;
+}

@@ -16,7 +16,7 @@
   </nav>
   <div class="cart-main">
     <div class="cart">
-      <div class="cart-product" ng-repeat="product in products">
+      <div class="cart-product" ng-repeat="product in products | orderBy:'products_id'">
         {{product.name}} <br>
         Price of Product: {{product.price}} <br>
         Quantity: <a href="#" editable-range="product.quantity" e-step="1" e-min="1" e-max="20" onbeforesave="updateTotalPrice(product.products_id, $data, product.id)">{{product.quantity}}</a><br>
