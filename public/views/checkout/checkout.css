@@ -32,17 +32,17 @@
 .checkout-middle {
   height: 90vh;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .checkout-cart {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50vw;
+  width: 33vw;
   height: 50vh;
+  margin-top: 10px;
   background: lightblue;
 }
 
@@ -54,4 +54,38 @@
 .checkout-total {
   margin-left: 10px;
   font-size: 20px;
+}
+
+.checkout-addresses {
+  width: 33vw;
+  height: 88vh;
+  border-right: 2px dashed black;
+  margin-top: 10px;
+}
+
+.checkout-billingAddress {
+  background: lightgreen;
+  height: 44vh;
+}
+
+.checkout-shippingAddress {
+  background: orange;
+  height: 44vh;
+}
+
+.checkout-shippingBilling {
+  width: 33vw;
+  height: 88vh;
+  border-right: 2px dashed black;
+  margin-top: 10px;
+}
+
+.checkout-shipping {
+  background: red;
+  height: 44vh;
+}
+
+.checkout-billing {
+  background: purple;
+  height: 44vh;
 }

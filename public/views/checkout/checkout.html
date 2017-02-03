@@ -31,8 +31,23 @@
   </div>
 </section>
 <section class="checkout-middle">
-  <p>You're one step closer to your one-of-a-kind candle!</p>
-  <button type="button" name="button" ui-sref="cart">Edit</button>
+
+  <div class="checkout-addresses">
+    <div class="checkout-billingAddress">
+      Address Stuff
+    </div>
+    <div class="checkout-shippingAddress">
+      Shipping Address stuff
+    </div>
+  </div>
+  <div class="checkout-shippingBilling">
+    <div class="checkout-shipping">
+      Shipping stuff
+    </div>
+    <div class="checkout-billing">
+      Billing stuff
+    </div>
+  </div>
   <div class="checkout-cart" ng-show="checkoutCart">
     <div class="checkout-product" ng-repeat="product in products | orderBy:'products_id'">
       {{product.name}} <br>
@@ -41,6 +56,8 @@
       Price: {{product.price * product.quantity}} <br>
     </div>
     <p class="checkout-total">Total: {{totalPrice}}</p>
+    <button type="button" name="button" ui-sref="cart">Edit Order</button>
+    <button type="button" name="button" ui-sref="cart">Place Order</button>
   </div>
   </div>
 </section>
