@@ -65,12 +65,12 @@
 
 .checkout-billingAddress {
   background: lightgreen;
-  height: 44vh;
+  height: 55vh;
 }
 
 .checkout-shippingAddress {
   background: orange;
-  height: 44vh;
+  height: 55vh;
 }
 
 .checkout-shippingBilling {

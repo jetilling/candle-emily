@@ -7,6 +7,11 @@ angular.module('candle').controller("checkoutCtrl", function(mainService, $scope
   $scope.checkoutAuth = true;
   $scope.cart = false;
   $scope.checkoutCart = false;
+  $scope.selected = false;
+
+  $scope.hide = function(){
+    $scope.selected = false;
+  }
 
   $scope.showLoginBox = function(){
     $scope.signUpDirective = false;
