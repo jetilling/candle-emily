@@ -35,9 +35,49 @@
   <div class="checkout-addresses">
     <div class="checkout-billingAddress">
       Address Stuff
+      <p>First Name</p>
+      <input type="text" name="" value="">
+      <p>Last Name</p>
+      <input type="text" name="" value="">
+      <p>Email</p>
+      <input type="text" name="" value="">
+      <p>Telephone</p>
+      <input type="text" name="" value="">
+      <p>Billing Address</p>
+      <input type="text" name="" value=""><br>
+      <input type="text" name="" value="">
+      <p>City</p>
+      <input type="text" name="" value="">
+      <p>State</p>
+      <input type="text" name="" value="">
+      <p>Postal Code</p>
+      <input type="text" name="" value="">
+      <p>Country</p>
+      <input type="text" name="" value="">
+      <br>
+      <input type="checkbox" ng-model="checked"> Different shipping address?
     </div>
-    <div class="checkout-shippingAddress">
+    <div class="checkout-shippingAddress" ng-show="checked">
       Shipping Address stuff
+      <p>First Name</p>
+      <input type="text" name="" value="">
+      <p>Last Name</p>
+      <input type="text" name="" value="">
+      <p>Email</p>
+      <input type="text" name="" value="">
+      <p>Telephone</p>
+      <input type="text" name="" value="">
+      <p>Shipping Address</p>
+      <input type="text" name="" value=""><br>
+      <input type="text" name="" value="">
+      <p>City</p>
+      <input type="text" name="" value="">
+      <p>State</p>
+      <input type="text" name="" value="">
+      <p>Postal Code</p>
+      <input type="text" name="" value="">
+      <p>Country</p>
+      <input type="text" name="" value="">
     </div>
   </div>
   <div class="checkout-shippingBilling">
@@ -46,6 +86,11 @@
     </div>
     <div class="checkout-billing">
       Billing stuff
+      <input type="radio" name="payment" value="paypal" checked ng-click="hide()"> Paypal
+      <input type="radio" name="payment" value="creditCard" ng-model="selected" ng-click="console()"> Credit Card
+      <div class="checkout-creditCard" ng-show="selected">
+        credit card inputs
+      </div>
     </div>
   </div>
   <div class="checkout-cart" ng-show="checkoutCart">
@@ -56,8 +101,10 @@
       Price: {{product.price * product.quantity}} <br>
     </div>
     <p class="checkout-total">Total: {{totalPrice}}</p>
-    <button type="button" name="button" ui-sref="cart">Edit Order</button>
-    <button type="button" name="button" ui-sref="cart">Place Order</button>
+    <div class="checkout-buttons">
+      <button type="button" name="button" ui-sref="cart">Edit Order</button>
+      <button type="button" name="button">Place Order</button>
+    </div>
   </div>
   </div>
 </section>
