@@ -102,6 +102,17 @@ angular.module('candle').service('mainService', function($http){
           result.totalPrice += item.price * item.quantity;
           result.items.push(item);
       })
+      for(var i = 0; i < result.items.length; i++){
+        if(result.items[i].products_id === 3){
+          result.items[i].shipping = 9 + ((result.items[i].quantity - 1) * 4);
+        }
+        else if(result.items[i].products_id === 2){
+          result.items[i].shipping = 8 + ((result.items[i].quantity - 1) * 3);
+        }
+        else if(result.items[i].products_id === 1){
+          result.items[i].shipping = 7 + ((result.items[i].quantity - 1) * 2);
+        }
+      }
       return result;
     })
   }
