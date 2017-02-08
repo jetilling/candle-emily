@@ -56,6 +56,11 @@
   font-size: 20px;
 }
 
+.checkout-shippingTotal {
+  margin-left: 10px;
+  font-size: 20px;  
+}
+
 .checkout-addresses {
   width: 33vw;
   height: 88vh;

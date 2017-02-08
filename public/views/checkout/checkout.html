@@ -83,24 +83,34 @@
   <div class="checkout-shippingBilling">
     <div class="checkout-shipping">
       Shipping stuff
+      <div class="checkout-shipping-products" ng-repeat="product in products | orderBy:'products_id' : reverse = true">
+        <div class="checkout-products-name">{{product.quantity}} {{product.name}}'s</div>
+        <div class="checkout-shipping-prices">{{product.shipping}} USD</div>
+      </div>
     </div>
     <div class="checkout-billing">
       Billing stuff
       <input type="radio" name="payment" value="paypal" checked ng-click="hide()"> Paypal
       <input type="radio" name="payment" value="creditCard" ng-model="selected" ng-click="console()"> Credit Card
       <div class="checkout-creditCard" ng-show="selected">
-        credit card inputs
+        <form stripe-form="stripeCallback">
+          <input ng-model="number" placeholder="Card Number" />
+          <input ng-model="expiry" placeholder="Expiration" />
+          <input ng-model="cvc" placeholder="CVC" />
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
   </div>
   <div class="checkout-cart" ng-show="checkoutCart">
     <div class="checkout-product" ng-repeat="product in products | orderBy:'products_id'">
       {{product.name}} <br>
-      Price of Product: {{product.price}} <br>
+      Price of Product: {{product.price}} USD <br>
       Quantity: {{product.quantity}}<br>
-      Price: {{product.price * product.quantity}} <br>
+      Price: {{product.price * product.quantity}} USD<br>
     </div>
-    <p class="checkout-total">Total: {{totalPrice}}</p>
+    <p class="checkout-shippingTotal">Shipping: </p>
+    <p class="checkout-total">Total: {{totalPrice}} USD</p>
     <div class="checkout-buttons">
       <button type="button" name="button" ui-sref="cart">Edit Order</button>
       <button type="button" name="button">Place Order</button>
