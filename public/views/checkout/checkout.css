@@ -41,7 +41,7 @@
   flex-direction: column;
   justify-content: center;
   width: 33vw;
-  height: 50vh;
+  height: 88vh;
   margin-top: 10px;
   background: lightblue;
 }
@@ -58,7 +58,7 @@
 
 .checkout-shippingTotal {
   margin-left: 10px;
-  font-size: 20px;  
+  font-size: 20px;
 }
 
 .checkout-addresses {
@@ -93,4 +93,17 @@
 .checkout-billing {
   background: purple;
   height: 44vh;
+}
+
+.checkout-products-name {
+  display: inline-block;
+}
+
+.checkout-shipping-prices {
+  display: inline-block;
+}
+
+.checkout-subtotal {
+  margin-left: 10px;
+  font-size: 20px;
 }

@@ -27,7 +27,15 @@ angular.module('candle').controller("checkoutCtrl", function(mainService, $scope
     mainService.userData()
     .then(function(response){
       userId = response[0].id
-      $scope.name = response[0].first_name
+      $scope.firstName = response[0].first_name;
+      $scope.lastName = response[0].last_name;
+      $scope.email = response[0].email;
+      $scope.telephone = response[0].phone;
+      $scope.address = response[0].address;
+      $scope.city = response[0].city;
+      $scope.state = response[0].state;
+      $scope.zipcode = response[0].zipcode;
+      $scope.country = response[0].country;
       token = document.cookie.split(';')[1].split('=')[1]
 
       mainService.addUserIdToCart(userId, token)
@@ -37,7 +45,9 @@ angular.module('candle').controller("checkoutCtrl", function(mainService, $scope
           .then(function(response){
             $scope.products = response.items;
             console.log(response.items)
+            $scope.subtotal = response.subtotal;
             $scope.totalPrice = response.totalPrice;
+            $scope.totalShipping = response.totalShipping;
           })
         }
       })
