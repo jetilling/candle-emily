@@ -96,32 +96,44 @@ angular.module('candle').service('mainService', function($http){
     }).then(function(response){
       var result = {
         items: [],
+        subtotal: 0,
+        totalShipping: 0,
         totalPrice: 0
       }
       response.data.forEach(function(item){
-          result.totalPrice += item.price * item.quantity;
+          result.subtotal += item.price * item.quantity;
           result.items.unshift(item);
       })
-      console.log(result);
       for(var i = 0; i < result.items.length; i++){
         if(result.items[i].products_id === 3){
           result.items[i].shipping = 9 + ((result.items[i].quantity - 1) * 4);
+          result.totalShipping += result.items[i].shipping;
         }
         else if(result.items[i].products_id === 2){
-          console.log(i);
-          if(result.items[i-1].shipping === undefined){
+          if(result.items[i-1] === undefined || result.items[i-1].shipping === undefined){
             result.items[i].shipping = 8 + ((result.items[i].quantity - 1) * 3);
+            result.totalShipping += result.items[i].shipping;
           }
-          else result.items[i].shipping = result.items[i].quantity * 3
+          else {
+            result.items[i].shipping = result.items[i].quantity * 3;
+            result.totalShipping += result.items[i].shipping;
+          }
         }
         else if(result.items[i].products_id === 1){
-          if(result.items[i-(result.items.length - 1)].shipping === undefined || result.items[i-1].shipping === undefined){
+          if(result.items[i-(result.items.length - 1)] === undefined ||
+             result.items[i-(result.items.length - 1)].shipping === undefined ||
+             result.items[i-1] === undefined ||
+             result.items[i-1].shipping === undefined){
             result.items[i].shipping = 7 + ((result.items[i].quantity - 1) * 2);
+            result.totalShipping += result.items[i].shipping;
           }
-          else result.items[i].shipping = result.items[i].quantity * 2
+          else {
+            result.items[i].shipping = result.items[i].quantity * 2
+            result.totalShipping += result.items[i].shipping;
+          }
         }
       }
-      console.log(result);
+      result.totalPrice = result.subtotal + result.totalShipping
       return result;
     })
   }

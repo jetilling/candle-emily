@@ -8,7 +8,7 @@
       <button class="cart-shopBtn" ui-sref="shop" type="button" name="button">Shop</button>
       <button class="cart-loginBtn" ng-show="loginBtn" ng-click="showLoginBox()">Login</button>
       <button class="cart-registerBtn" ng-show="signUpBtn" ng-click="showSignUpBox()">Register</button>
-      <div class="cart-name" ng-show="accountName">Hi, {{name}}</div>
+      <div class="cart-name" ng-show="accountName">Hi, {{firstName}}</div>
       <button class="cart-logoutBtn" type="button" name="button" ng-click="logout()" ng-show="logoutBtn">Log Out</button>
     </div>
     <login-Directive ng-show="loginDirective" class="login-directive"></login-Directive>
@@ -36,48 +36,46 @@
     <div class="checkout-billingAddress">
       Address Stuff
       <p>First Name</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="{{firstName}}" placeholder="First Name">
       <p>Last Name</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="{{lastName}}" placeholder="Last Name">
       <p>Email</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="{{email}}" placeholder="Email">
       <p>Telephone</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="{{phone}}" placeholder="Telephone">
       <p>Billing Address</p>
-      <input type="text" name="" value=""><br>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="{{address}}" placeholder="Billing Address">
       <p>City</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="{{city}}" placeholder="City">
       <p>State</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="{{state}}" placeholder="State">
       <p>Postal Code</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="{{zipcode}}" placeholder="Postal Code">
       <p>Country</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="{{country}}" placeholder="Country">
       <br>
       <input type="checkbox" ng-model="checked"> Different shipping address?
     </div>
     <div class="checkout-shippingAddress" ng-show="checked">
       Shipping Address stuff
       <p>First Name</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="" placeholder="First Name">
       <p>Last Name</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="" placeholder="Last Name">
       <p>Email</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="" placeholder="Email">
       <p>Telephone</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="" placeholder="Telephone">
       <p>Shipping Address</p>
-      <input type="text" name="" value=""><br>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="" placeholder="Billing Address">
       <p>City</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="" placeholder="City">
       <p>State</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="" placeholder="State">
       <p>Postal Code</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="" placeholder="Postal Code">
       <p>Country</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="" placeholder="Country">
     </div>
   </div>
   <div class="checkout-shippingBilling">
@@ -87,6 +85,7 @@
         <div class="checkout-products-name">{{product.quantity}} {{product.name}}'s</div>
         <div class="checkout-shipping-prices">{{product.shipping}} USD</div>
       </div>
+      <p>Total Shipping: {{totalShipping}}</p>
     </div>
     <div class="checkout-billing">
       Billing stuff
@@ -109,7 +108,8 @@
       Quantity: {{product.quantity}}<br>
       Price: {{product.price * product.quantity}} USD<br>
     </div>
-    <p class="checkout-shippingTotal">Shipping: </p>
+    <p class="checkout-subtotal">Subtotal: {{subtotal}}</p>
+    <p class="checkout-shippingTotal">Shipping: {{totalShipping}}</p>
     <p class="checkout-total">Total: {{totalPrice}} USD</p>
     <div class="checkout-buttons">
       <button type="button" name="button" ui-sref="cart">Edit Order</button>
