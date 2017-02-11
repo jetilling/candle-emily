@@ -35,7 +35,8 @@ angular.module('candle').controller('cartCtrl', function($scope, $state, mainSer
     }
   }
 
-  var token = document.cookie.split(';')[1].split('=')[1]
+  console.log(document.cookie);
+  var token = document.cookie.split("WECtoken=")[1]
 
   mainService.getSavedProducts(token)
   .then(function(response){
@@ -45,7 +46,7 @@ angular.module('candle').controller('cartCtrl', function($scope, $state, mainSer
   })
 
   $scope.updateTotalPrice = function(productsId, quantity){
-    mainService.updateProduct(productsId, quantity)
+    mainService.updateProduct(productsId, quantity, token)
     .then(function(response){
       if(response) {
         mainService.getSavedProducts(token)

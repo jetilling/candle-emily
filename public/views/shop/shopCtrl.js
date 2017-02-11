@@ -22,7 +22,6 @@ angular.module('candle').controller('shopCtrl', function($scope, $state, mainSer
   if ($auth.isAuthenticated()){
     mainService.userData()
     .then(function(response){
-      console.log(response[0])
       $scope.name = response[0].first_name
     })
     $scope.accountName = true;
