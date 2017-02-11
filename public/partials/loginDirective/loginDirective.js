@@ -28,7 +28,7 @@ angular.module('candle').directive('loginDirective', function(){
               .then(function(response){
                 userId = response[0].id
                 $scope.name = response[0].first_name
-                token = document.cookie.split(';')[1].split('=')[1]
+                token = document.cookie.split("WECtoken=")[1]
 
                 mainService.addUserIdToCart(userId, token)
                 .then(function(response){

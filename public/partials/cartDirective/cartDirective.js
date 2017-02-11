@@ -4,7 +4,7 @@ angular.module('candle').directive("cartDirective", function(){
     templateUrl: './partials/cartDirective/cartDirective.html',
     controller: function($scope, mainService){
 
-      var token = document.cookie.split(';')[1].split('=')[1]
+      var token = document.cookie.split("WECtoken=")[1]
 
       mainService.getSavedProducts(token)
       .then(function(response){

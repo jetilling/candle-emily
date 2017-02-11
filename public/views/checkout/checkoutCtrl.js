@@ -36,7 +36,7 @@ angular.module('candle').controller("checkoutCtrl", function(mainService, $scope
       $scope.state = response[0].state;
       $scope.zipcode = response[0].zipcode;
       $scope.country = response[0].country;
-      token = document.cookie.split(';')[1].split('=')[1]
+      token = document.cookie.split("WECtoken=")[1]
 
       mainService.addUserIdToCart(userId, token)
       .then(function(response){

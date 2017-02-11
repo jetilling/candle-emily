@@ -56,11 +56,11 @@ angular.module('candle').service('mainService', function($http){
     })
   }
 
-  this.updateProduct = function(productsId, quantity){
+  this.updateProduct = function(productsId, quantity, token){
     return $http({
       method: 'PUT',
       url: '/api/updateProduct',
-      data: {productsId: productsId, quantity: quantity}
+      data: {productsId: productsId, quantity: quantity, token: token}
     }).then(function(response){
       return response.data
     })

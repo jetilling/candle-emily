@@ -15,12 +15,14 @@ angular.module('candle').directive('shopDirective', function(){
         }
       }
 
+      console.log(document.cookie.split("WECtoken=")[1]);
+      console.log(document.cookie.indexOf("WECtoken"));
       $scope.addToCart = function(id, quantity, name, price){
-        if(document.cookie.split(';')[1] === undefined) {
+        if(document.cookie.indexOf("WECtoken") === -1) {
           var token = Math.random().toString(20).substr(2);
-          document.cookie = "token = " + token;
+          document.cookie = "WECtoken = " + token;
         }
-        else token = document.cookie.split(';')[1].split('=')[1]
+        else token = document.cookie.split("WECtoken=")[1]
         $rootScope.candleName = name;
         $rootScope.quantityBanner = quantity;
         var totalPrice = price * quantity;
