@@ -36,46 +36,46 @@
     <div class="checkout-billingAddress">
       Address Stuff
       <p>First Name</p>
-      <input type="text" name="" value="{{firstName}}" placeholder="First Name">
+      <input type="text" name="" value="{{firstName}}" placeholder="First Name" ng-model="firstName">
       <p>Last Name</p>
-      <input type="text" name="" value="{{lastName}}" placeholder="Last Name">
+      <input type="text" name="" value="{{lastName}}" placeholder="Last Name" ng-model="lastName">
       <p>Email</p>
-      <input type="text" name="" value="{{email}}" placeholder="Email">
+      <input type="text" name="" value="{{email}}" placeholder="Email" ng-model="email">
       <p>Telephone</p>
-      <input type="text" name="" value="{{phone}}" placeholder="Telephone">
+      <input type="text" name="" value="{{phone}}" placeholder="Telephone" ng-model="phone">
       <p>Billing Address</p>
-      <input type="text" name="" value="{{address}}" placeholder="Billing Address">
+      <input type="text" name="" value="{{address}}" placeholder="Billing Address" ng-model="address">
       <p>City</p>
-      <input type="text" name="" value="{{city}}" placeholder="City">
+      <input type="text" name="" value="{{city}}" placeholder="City" ng-model="city">
       <p>State</p>
-      <input type="text" name="" value="{{state}}" placeholder="State">
+      <input type="text" name="" value="{{state}}" placeholder="State" ng-model="state">
       <p>Postal Code</p>
-      <input type="text" name="" value="{{zipcode}}" placeholder="Postal Code">
+      <input type="text" name="" value="{{zipcode}}" placeholder="Postal Code" ng-model="zipcode">
       <p>Country</p>
-      <input type="text" name="" value="{{country}}" placeholder="Country">
+      <input type="text" name="" value="{{country}}" placeholder="Country" ng-model="country">
       <br>
-      <input type="checkbox" ng-model="checked"> Different shipping address?
+      <input type="checkbox" ng-model="checked" ng-click="saveBillingInfo(firstName, lastName, email)"> Different shipping address?
     </div>
     <div class="checkout-shippingAddress" ng-show="checked">
       Shipping Address stuff
       <p>First Name</p>
-      <input type="text" name="" value="" placeholder="First Name">
+      <input type="text" name="" value="" placeholder="First Name" ng-model="shippingFirstName">
       <p>Last Name</p>
-      <input type="text" name="" value="" placeholder="Last Name">
+      <input type="text" name="" value="" placeholder="Last Name" ng-model="shippingLastName">
       <p>Email</p>
-      <input type="text" name="" value="" placeholder="Email">
+      <input type="text" name="" value="" placeholder="Email" ng-model="shippingEmail">
       <p>Telephone</p>
-      <input type="text" name="" value="" placeholder="Telephone">
+      <input type="text" name="" value="" placeholder="Telephone" ng-model="shippingPhone">
       <p>Shipping Address</p>
-      <input type="text" name="" value="" placeholder="Billing Address">
+      <input type="text" name="" value="" placeholder="Billing Address" ng-model="shippingAddress">
       <p>City</p>
-      <input type="text" name="" value="" placeholder="City">
+      <input type="text" name="" value="" placeholder="City" ng-model="shippingCity">
       <p>State</p>
-      <input type="text" name="" value="" placeholder="State">
+      <input type="text" name="" value="" placeholder="State" ng-model="shippingState">
       <p>Postal Code</p>
-      <input type="text" name="" value="" placeholder="Postal Code">
+      <input type="text" name="" value="" placeholder="Postal Code" ng-model="shippingZipcode">
       <p>Country</p>
-      <input type="text" name="" value="" placeholder="Country">
+      <input type="text" name="" value="" placeholder="Country" ng-model="shippingCountry">
     </div>
   </div>
   <div class="checkout-shippingBilling">
