@@ -71,6 +71,10 @@ angular.module('candle').controller("checkoutCtrl", function(mainService, $scope
     });
   }
 
+  $scope.saveBillingInfo = function(firstName, lastName, email){
+    console.log(firstName, lastName, email);
+  }
+
   // Stripe Response Handler
   $scope.stripeCallback = function (code, result) {
       if (result.error) {
